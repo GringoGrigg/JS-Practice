@@ -1,0 +1,2 @@
+// "pineapple"
+"pine".concat("apple");
