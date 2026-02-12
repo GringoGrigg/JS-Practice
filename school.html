@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>School</title>
+</head>
+
+
+<body>
+    <h1>Welcome to Adung'os Institute of science and technology</h1>
+<p> First enter your age in the button below to verify credentials</p>
+<input id="age" value="18" />
+<button onclick="myFunction()">INPUT YOUR AGE</button>
+<p id="demo"></p>
+<script>
+    function myFunction(){
+let adult;
+let age = Number(document.getElementById("age").value);
+if (isNaN(age)) {
+  adult = "Input is not a number";
+} else {
+  adult = (age < 18) ? "AGE LIMIT NOT REACHED" : "OLD ENOUGH TO BEGIN CLASSES!";
+}
+document.getElementById("demo").innerHTML = adult +" (The age value is: " + age + ")";
+    }
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
