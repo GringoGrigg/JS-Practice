@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <h1>Hello, Wold</h1>  <!-- Fixed typo -->
-    <p id="demo"></p>
-    
-    <!-- Button belongs in HTML, not inside script tags -->
-    <button onclick="window.print()">Print page</button>
 
-    <script>
-        // JavaScript goes in script tags, not HTML elements
-        document.getElementById("demo").innerHTML = "Hello JavaScript was used here";
-    </script>
+<h2>JavaScript Comparisons</h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction()">INPUT YOUR AGE</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() 
+{
+  let voteable;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 18) ? "STILL YOUNG TO VOTE" : "LEGIBLE TO VOTE!";
+  }
+  document.getElementById("demo").innerHTML = voteable +" (The age value is: " + age + ")";
+}
+</script>
+
 </body>
 </html>
