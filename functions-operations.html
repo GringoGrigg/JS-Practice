@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Operations</title>
+</head>
+<body>
+    <h1>Enter the type of mathematical operation you want us to perform Today!</h1>
+    <p>Click the button below to input your operation and values</p>
+    <button onclick="myFunction()">INPUT YOUR OPERATION</button>
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+        // Prompt for the operation
+        let operation = prompt("Enter the operation you want to perform (addition, subtraction, multiplication, division):").toLowerCase();
+        
+        // Prompt for the two numbers
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+        
+        let result;
+        
+        switch (operation) {
+            case "addition":
+                result = `You chose addition! The result of ${num1} + ${num2} is: ${num1 + num2}`;
+                break;
+            case "subtraction":
+                result = `You chose subtraction! The result of ${num1} - ${num2} is: ${num1 - num2}`;
+                break;
+            case "multiplication":
+                result = `You chose multiplication! The result of ${num1} * ${num2} is: ${num1 * num2}`;
+                break;
+            case "division":
+                if (num2 !== 0) {
+                    result = `You chose division! The result of ${num1} / ${num2} is: ${num1 / num2}`;
+                } else {
+                    result = "Error: Cannot divide by zero!";
+                }
+                break;
+            default:
+                result = "Invalid operation. Please enter addition, subtraction, multiplication, or division.";
+        }
+        
+        document.getElementById("demo").innerHTML = result;
+    }
+    </script>
+</body>
+</html>

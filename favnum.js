@@ -6,4 +6,3 @@ console.log("My favorite number divided by two is:", dividedByTwo);
 
 
 
-//ex 3
